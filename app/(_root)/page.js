@@ -1,4 +1,3 @@
-// app/page.js (NEW Landing Page)
 "use client";
 
 import Link from "next/link";
@@ -68,7 +67,7 @@ export default function LandingPage() {
           </motion.p>
           <motion.div variants={fadeIn(0.4)} initial="hidden" animate="visible">
             <Link
-              href="/discover"
+              href="/app"
               className="inline-flex items-center justify-center px-8 py-4 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-lg text-lg shadow-lg transition-transform duration-300 hover:scale-105"
             >
               Find Your Tech Calling Now
