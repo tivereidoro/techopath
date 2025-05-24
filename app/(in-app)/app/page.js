@@ -1,5 +1,5 @@
-// app/page.js
 "use client";
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Wand2, AlertTriangleIcon } from "lucide-react";
@@ -18,7 +18,7 @@ const experienceLevels = [
   "Lead/Principal",
 ];
 
-export default function HomePage() {
+export default function MainApp() {
   const [skills, setSkills] = useState([]);
   const [interests, setInterests] = useState("");
   const [experienceLevel, setExperienceLevel] = useState(experienceLevels[0]);
