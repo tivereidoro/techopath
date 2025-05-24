@@ -67,11 +67,12 @@ export default function LandingPage() {
             guiding you from confusion to clarity.
           </motion.p>
           <motion.div variants={fadeIn(0.4)} initial="hidden" animate="visible">
-            <Link href="/discover" legacyBehavior>
-              <a className="inline-flex items-center justify-center px-8 py-4 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-lg text-lg shadow-lg transition-transform duration-300 hover:scale-105">
-                Find Your Tech Calling Now
-                <Zap size={24} className="ml-3" />
-              </a>
+            <Link
+              href="/discover"
+              className="inline-flex items-center justify-center px-8 py-4 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-lg text-lg shadow-lg transition-transform duration-300 hover:scale-105"
+            >
+              Find Your Tech Calling Now
+              <Zap size={24} className="ml-3" />
             </Link>
           </motion.div>
         </div>
@@ -281,11 +282,12 @@ export default function LandingPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn(0.4)}
           >
-            <Link href="/discover" legacyBehavior>
-              <a className="inline-flex items-center justify-center px-10 py-5 bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-lg text-xl shadow-lg transition-transform duration-300 hover:scale-105">
-                Get My AI Career Suggestions
-                <ChevronRight size={28} className="ml-3" />
-              </a>
+            <Link
+              href="/discover"
+              className="inline-flex items-center justify-center px-10 py-5 bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-lg text-xl shadow-lg transition-transform duration-300 hover:scale-105"
+            >
+              Get My AI Career Suggestions
+              <ChevronRight size={28} className="ml-3" />
             </Link>
           </motion.div>
         </div>
