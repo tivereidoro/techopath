@@ -7,7 +7,7 @@ export default function SkillInput({ skills, setSkills }) {
   const [currentSkill, setCurrentSkill] = useState("");
 
   const handleAddSkill = (e) => {
-    e.preventDefault(); // Prevent form submission if inside a form
+    e.preventDefault();
     if (
       currentSkill.trim() &&
       !skills.includes(currentSkill.trim().toLowerCase())
@@ -42,7 +42,7 @@ export default function SkillInput({ skills, setSkills }) {
           value={currentSkill}
           onChange={(e) => setCurrentSkill(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Type a skill and press Enter or Add"
+          placeholder="Type a skill and press Enter or click Add button"
           className="flex-grow p-2 border border-slate-600 rounded-md bg-slate-800 text-slate-100 focus:ring-sky-500 focus:border-sky-500"
         />
         <button

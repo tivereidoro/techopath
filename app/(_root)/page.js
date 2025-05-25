@@ -51,8 +51,8 @@ export default function LandingPage() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6"
           >
             <span className="block mb-4 md:mb-8">Lost in the Tech Maze?</span>
-            <span className="block bg-gradient-to-r from-blue-500 via-golden-logo to-pink-500 bg-clip-text text-transparent">
-              Let AI Chart Your Perfect Career Course.
+            <span className="block gradient-text text-transparent">
+              Let AI Chart Your Perfect Career Path.
             </span>
           </motion.h1>
           <motion.p
@@ -61,8 +61,9 @@ export default function LandingPage() {
             animate="visible"
             className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10"
           >
-            Stop guessing. Start discovering. Our intelligent platform analyzes
-            your unique spark to illuminate personalized tech career paths,
+            Stop guessing. Discover the best recommended tech path that aligns
+            with your passion and purpose. Our intelligent platform analyzes
+            your unique spark to illuminate your personalized tech career paths,
             guiding you from confusion to clarity.
           </motion.p>
           <motion.div variants={fadeIn(0.4)} initial="hidden" animate="visible">
@@ -88,12 +89,12 @@ export default function LandingPage() {
             className="text-center max-w-3xl mx-auto mb-12 md:mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-sky-300 mb-4">
-              The Tech World is Vast. Your Path Shouldn't Be a Puzzle.
+              The Tech World is Vast But Your Path Shouldn&apos;t Be a Puzzle.
             </h2>
             <p className="text-slate-300 md:text-lg">
-              Feeling overwhelmed by endless options? Unsure which skills to
-              learn or where your passions truly align in the ever-evolving tech
-              landscape? You're not alone.
+              Feeling overwhelmed by endless options and tech skills? Unsure
+              which skills to learn or where your passions truly align in the
+              ever-evolving tech landscape? You&apos;re not alone.
             </p>
           </motion.div>
           {/* Optional: Add an AI image here like problemImageUrl */}
@@ -158,15 +159,15 @@ export default function LandingPage() {
                 ),
                 title: "2. AI Works Its Magic",
                 description:
-                  "Our advanced Gemini AI analyzes your input against a vast database of tech roles and trends.",
+                  "The AI analyzes your input against a vast database of tech roles and current trends.",
               },
               {
                 icon: (
                   <MapPin size={48} className="text-green-400 mx-auto mb-4" />
                 ),
-                title: "3. Discover Your Pathways",
+                title: `3. Discover Your Pathways`,
                 description:
-                  "Receive 3 personalized career suggestions, complete with skills to learn, salary insights, and learning resources.",
+                  "Receive personalized career suggestions, complete with skills to learn, salary insights, and learning resources.",
               },
             ].map((step, index) => (
               <motion.div
@@ -199,7 +200,7 @@ export default function LandingPage() {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-sky-300 mb-3">
-              Why Pathfinder? Go Beyond Generic Advice.
+              Why TechOpath? Go Beyond Generic Advice.
             </h2>
             <p className="text-slate-300 md:text-lg max-w-2xl mx-auto">
               We provide more than just job titles. We offer a launchpad for
@@ -212,7 +213,7 @@ export default function LandingPage() {
                 icon: <Target size={32} className="text-red-400" />,
                 title: "AI-Powered Precision",
                 description:
-                  "Leverage Google's Gemini AI for suggestions that truly understand your potential and market demands.",
+                  "Leverage AI for suggestions that truly understand your potential and market demands.",
               },
               {
                 icon: <Users size={32} className="text-teal-400" />,
@@ -272,8 +273,8 @@ export default function LandingPage() {
             className="text-slate-300 md:text-lg max-w-xl mx-auto mb-10"
           >
             Your personalized tech career roadmap is just a few clicks away.
-            It's free, insightful, and could be the first step towards a future
-            you'll love.
+            It&apos;s free, insightful, and could be the first step towards a
+            future you&apos;ll love.
           </motion.p>
           <motion.div
             initial="hidden"
@@ -282,10 +283,10 @@ export default function LandingPage() {
             variants={fadeIn(0.4)}
           >
             <Link
-              href="/discover"
+              href="/app"
               className="inline-flex items-center justify-center px-10 py-5 bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-lg text-xl shadow-lg transition-transform duration-300 hover:scale-105"
             >
-              Get My AI Career Suggestions
+              Discover Your Tech Path Now
               <ChevronRight size={28} className="ml-3" />
             </Link>
           </motion.div>

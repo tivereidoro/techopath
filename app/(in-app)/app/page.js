@@ -93,7 +93,7 @@ export default function MainApp() {
   return (
     <div className="min-h-screen container flex flex-col items-center mx-auto px-4 py-8 md:py-12">
       <header className="text-center py-10">
-        <h1 className="text-4xl md:text-5xl font-bold text-golden-logo mb-2">
+        <h1 className="text-4xl md:text-5xl font-bold gradient-text text-transparent mb-2">
           Tech Career Pathfinder{" "}
           {/* <Wand2 className="inline-block mb-2 ml-2 text-yellow-400" size={40} /> */}
           <BrainCircuit

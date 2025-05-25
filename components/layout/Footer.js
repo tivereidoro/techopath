@@ -5,7 +5,7 @@ export default function Footer() {
     <div>
       <footer className="py-8 bg-slate-900 border-t border-slate-700">
         <div className="container mx-auto space-y-4 px-6 text-center text-slate-500 text-sm">
-          <p>© {new Date().getFullYear()} TechOpath. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} TechOpath AI. All rights reserved.</p>
 
           <p>
             ₊⊹ Built with ❤︎ by{" "}

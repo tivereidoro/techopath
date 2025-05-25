@@ -51,10 +51,11 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     key={item.id}
-                    className={`${
+                    className={`flex items-center gap-1.5 ${
                       item.active ? "text-primary" : "text-golden-logo"
                     }`}
                   >
+                    {<item.icon className="size-5" />}
                     {item.name}
                   </Link>
                 ))}

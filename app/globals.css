@@ -135,6 +135,32 @@ body {
   --font-satoshi: satoshi, sans-serif;
 }
 
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #e8bb6a,
+    #f6339a,
+    #e8bb6a,
+    #3b82f6,
+    #e8bb6a,
+    #f6339a
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-text 5s linear infinite;
+}
+
+@keyframes gradient-text {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 1.5px;

@@ -1,4 +1,6 @@
-function PathwayCard({ pathway }) {
+import { motion } from "framer-motion";
+
+export function PathwayCard({ pathway }) {
   return (
     <motion.div
       whileHover={{ scale: 1.01 }}
@@ -54,7 +56,7 @@ function PathwayCard({ pathway }) {
   );
 }
 
-function LinkIcon() {
+export function LinkIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
