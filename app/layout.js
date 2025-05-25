@@ -1,4 +1,5 @@
 import "./globals.css";
+import localFont from "next/font/local";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -11,8 +12,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const satoshi = localFont({
+  src: "./fonts/satoshi.ttf",
+  variable: "--font-satoshi",
+  weight: "100 900",
+});
+
 export const metadata = {
-  title: "TechoPath",
+  title: "TechOPath",
   description: "Discover your personalised tech path with TechoPath",
   openGraph: {
     title: "TechoPath",
@@ -42,7 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-base`}
+        className={`${geistSans.variable} ${satoshi.variable} antialiased text-base`}
       >
         {children}
       </body>

@@ -4,12 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-}
-html {
-  font-size: 16px;
 }
 
 body {
@@ -136,6 +131,7 @@ body {
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --font-satoshi: satoshi, sans-serif;
 }
 
 /* Custom scrollbar */
