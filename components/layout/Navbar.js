@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 import { Text, X } from "lucide-react";
 import { NavItems } from "@/lib/ui_config";
-import { getStartedLink } from "@/lib/config";
+import {} from "@/lib/config";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 // import MainLogo from "@/components/ui/MainLogo";
@@ -18,13 +18,13 @@ import Image from "next/image";
 // ==============================
 // ============= Homepage Navbar
 // ==============================
-export default function Header() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = NavItems();
 
   return (
-    <div className="border-gray-300 border-b shadow-sm">
-      <header className="px-4 lg:px-0 py-6 sm:py-8 w-full mx-auto ">
+    <div className="border-gray-600 border-b shadow-sm">
+      <header className="container px-4 lg:px-0 py-6 sm:py-8 w-full mx-auto ">
         <nav className="flex w-full items-center mx-auto px-3   shrink-0 justify-between">
           <Link href="/" className="flex items-center" prefetch={false}>
             {/* <MainLogo /> */}
@@ -33,6 +33,14 @@ export default function Header() {
               width={50}
               height={30}
               alt="logo"
+            />
+            <Image
+              src={"/svgs/techOpathText.png"}
+              width={220}
+              height={180}
+              alt="logo"
+              className="hidden md:block ml-2 opacity-70"
+              style={{ width: "auto", height: "30px" }}
             />
           </Link>
 
@@ -44,7 +52,7 @@ export default function Header() {
                     href={item.href}
                     key={item.id}
                     className={`${
-                      item.active ? "text-primary" : "text-[#000E2E]"
+                      item.active ? "text-primary" : "text-golden-logo"
                     }`}
                   >
                     {item.name}
@@ -53,8 +61,12 @@ export default function Header() {
               </div>
 
               {/* CTA button */}
-              <Link href={getStartedLink}>
-                <Button>Contact Us</Button>
+              <Link href={"/app"}>
+                <Button
+                  className={`p-6 border bg-transparent border-golden-logo`}
+                >
+                  Get Started
+                </Button>
               </Link>
             </div>
 
@@ -87,9 +99,6 @@ export default function Header() {
                 />
               </Link>
             </SheetTitle>
-            {/* <SheetDescription className="flex justify-start px-1">
-              Locoomo Logistics
-            </SheetDescription> */}
           </SheetHeader>
 
           <div className="mt-11  overflow-y-auto h-fit w-full flex flex-col gap-6 font-inter">
@@ -113,7 +122,7 @@ export default function Header() {
             {/* CTA button */}
             <div className="flex">
               <Button className="mt-1.5">
-                <Link href={getStartedLink}>Contact Us</Link>
+                <Link href={"/app"}>Get Started</Link>
               </Button>
             </div>
           </div>

@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 
 // Placeholder for actual AI-generated images. Replace with your image paths.
 const heroImageUrl = "/images/ai-hero-bg.png"; // e.g., an abstract neural network or futuristic landscape
-const problemImageUrl = "/images/ai-crossroads.jpg"; // e.g., stylized image of someone at a confusing intersection
+const problemImageUrl = "/images/ai-sav.jpg"; // e.g., stylized image of someone at a confusing intersection
 
 export default function LandingPage() {
   const fadeIn = (delay = 0) => ({
@@ -50,8 +50,8 @@ export default function LandingPage() {
             animate="visible"
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6"
           >
-            <span className="block">Lost in the Tech Maze?</span>
-            <span className="block text-sky-400">
+            <span className="block mb-4 md:mb-8">Lost in the Tech Maze?</span>
+            <span className="block bg-gradient-to-r from-blue-500 via-golden-logo to-pink-500 bg-clip-text text-transparent">
               Let AI Chart Your Perfect Career Course.
             </span>
           </motion.h1>
@@ -70,7 +70,7 @@ export default function LandingPage() {
               href="/app"
               className="inline-flex items-center justify-center px-8 py-4 bg-sky-600 hover:bg-sky-700 text-white font-semibold rounded-lg text-lg shadow-lg transition-transform duration-300 hover:scale-105"
             >
-              Find Your Tech Calling Now
+              Find Your Path
               <Zap size={24} className="ml-3" />
             </Link>
           </motion.div>
@@ -111,7 +111,7 @@ export default function LandingPage() {
               height={450}
               layout="responsive"
               objectFit="contain"
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-xl  z-10"
             />
           </motion.div>
         </div>
@@ -291,17 +291,6 @@ export default function LandingPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-8 bg-slate-900 border-t border-slate-700">
-        <div className="container mx-auto px-6 text-center text-slate-500 text-sm">
-          <p>
-            © {new Date().getFullYear()} Tech Career Pathfinder. All rights
-            reserved.
-          </p>
-          <p>Powered by You & Google Gemini AI</p>
-        </div>
-      </footer>
     </div>
   );
 }
