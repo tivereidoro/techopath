@@ -15,7 +15,7 @@ import {
 import { motion } from "framer-motion";
 
 // Placeholder for actual AI-generated images. Replace with your image paths.
-const heroImageUrl = "/images/ai-hero-background.jpg"; // e.g., an abstract neural network or futuristic landscape
+const heroImageUrl = "/images/ai-hero-bg.png"; // e.g., an abstract neural network or futuristic landscape
 const problemImageUrl = "/images/ai-crossroads.jpg"; // e.g., stylized image of someone at a confusing intersection
 
 export default function LandingPage() {
@@ -32,15 +32,15 @@ export default function LandingPage() {
         <div className="absolute inset-0 z-0">
           {/* Example placeholder: Gradient or a low-res pattern */}
           <Image
-            src={heroImageUrl} // Replace with your actual AI-generated image
-            alt="Abstract AI network"
+            src={heroImageUrl}
+            alt="AI network"
             layout="fill"
             objectFit="cover"
             quality={80}
-            className="opacity-30" // Adjust opacity as needed
+            className="opacity-90" // Adjust opacity as needed
             priority // Load this image first
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/80 to-slate-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/60 to-slate-900"></div>
         </div>
 
         <div className="container mx-auto px-6 text-center relative z-10">

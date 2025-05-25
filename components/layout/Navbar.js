@@ -24,12 +24,16 @@ export default function Header() {
 
   return (
     <div className="border-gray-300 border-b shadow-sm">
-      <header className="max-w-6xl font-inter px-4 lg:px-0 py-6 sm:py-8 w-full mx-auto ">
+      <header className="px-4 lg:px-0 py-6 sm:py-8 w-full mx-auto ">
         <nav className="flex w-full items-center mx-auto px-3   shrink-0 justify-between">
-          {/* Locoomo logo */}
           <Link href="/" className="flex items-center" prefetch={false}>
             {/* <MainLogo /> */}
-            <Image src={"/svgs/next.svg"} width={30} height={30} alt="logo" />
+            <Image
+              src={"/svgs/techOpath.png"}
+              width={50}
+              height={30}
+              alt="logo"
+            />
           </Link>
 
           <div className="flex items-center justify-between">
