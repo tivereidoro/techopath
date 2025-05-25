@@ -95,7 +95,6 @@ export default function MainApp() {
       <header className="text-center py-10">
         <h1 className="text-4xl md:text-5xl font-bold gradient-text text-transparent mb-2">
           Tech Career Pathfinder{" "}
-          {/* <Wand2 className="inline-block mb-2 ml-2 text-yellow-400" size={40} /> */}
           <BrainCircuit
             size={40}
             className="inline-block mb-2 ml-2 text-yellow-400"
@@ -106,9 +105,9 @@ export default function MainApp() {
         </p>
       </header>
 
-      <div className="flex flex-col gap-5">
-        <div className="w-3xl mx-auto bg-slate-800 p-10 md:p-8 rounded-xl shadow-2xl border border-slate-700">
-          <form onSubmit={handleSubmit} className="space-y-6 p-6">
+      <div className="w-full flex flex-col gap-5">
+        <div className="bg-slate-800 p-4 md:p-8 rounded-xl shadow-2xl border border-slate-700">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <SkillInput skills={skills} setSkills={setSkills} />
 
             <div>
