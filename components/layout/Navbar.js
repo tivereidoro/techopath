@@ -10,10 +10,9 @@ import {
 import React, { useState } from "react";
 import { Text, X } from "lucide-react";
 import { NavItems } from "@/lib/ui_config";
-import {} from "@/lib/config";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-// import MainLogo from "@/components/ui/MainLogo";
+import MainLogo from "@/components/ui/MainLogo";
 
 // ==============================
 // ============= Homepage Navbar
@@ -24,24 +23,10 @@ export default function Navbar() {
 
   return (
     <div className="border-gray-600 border-b shadow-sm">
-      <header className="container px-4 lg:px-0 py-6 sm:py-8 w-full mx-auto ">
+      <header className="container px-4 lg:px-0 py-4 sm:py-7 w-full mx-auto ">
         <nav className="flex w-full items-center mx-auto px-3   shrink-0 justify-between">
           <Link href="/" className="flex items-center" prefetch={false}>
-            {/* <MainLogo /> */}
-            <Image
-              src={"/svgs/techOpath.png"}
-              width={50}
-              height={30}
-              alt="logo"
-            />
-            <Image
-              src={"/svgs/techOpathText.png"}
-              width={220}
-              height={180}
-              alt="logo"
-              className="hidden md:block ml-2 opacity-70"
-              style={{ width: "auto", height: "30px" }}
-            />
+            <MainLogo />
           </Link>
 
           <div className="flex items-center justify-between">
@@ -77,7 +62,7 @@ export default function Navbar() {
               className="flex md:hidden"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X size={25} /> : <Text size={25} />}
+              {isOpen ? <X size={28} /> : <Text size={35} />}
             </button>
           </div>
         </nav>
@@ -86,23 +71,18 @@ export default function Navbar() {
       {/* Mobile screen menu */}
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetContent
-          side="left"
-          className="block md:hidden w-[360px] max-[370px]:w-64"
+          side="right"
+          className="block md:hidden w-[340px] max-[360px]:w-64 border-gray-900"
         >
           <SheetHeader>
             <SheetTitle>
               <Link href="/" className="flex items-center" prefetch={false}>
-                <Image
-                  src={"/svgs/next.svg"}
-                  width={30}
-                  height={30}
-                  alt="logo"
-                />
+                <MainLogo />
               </Link>
             </SheetTitle>
           </SheetHeader>
 
-          <div className="mt-11  overflow-y-auto h-fit w-full flex flex-col gap-6 font-inter">
+          <div className="mt-8 px-4 overflow-y-auto h-fit w-full flex flex-col gap-6 font-inter">
             {navItems.map((item, idx) => (
               <Link
                 key={idx}
@@ -111,18 +91,20 @@ export default function Navbar() {
                 className={`h-full relative flex items-center whitespace-nowrap rounded-md ${
                   item.active
                     ? "text-primary shadow-sm"
-                    : "text-[#000E2E] hover:bg-neutral-200  hover:text-neutral-700"
+                    : "text-golden-logo hover:scale-x-110"
                 }`}
               >
                 <div className="relative font-bold text-lg px-1.5 flex flex-row items-center rounded-md duration-100">
-                  <span>{item.name}</span>
+                  <span className="flex items-center gap-1.5">
+                    {<item.icon className="size-5" />} {item.name}
+                  </span>
                 </div>
               </Link>
             ))}
 
             {/* CTA button */}
             <div className="flex">
-              <Button className="mt-1.5">
+              <Button className="mt-1.5 p-6 border border-golden-logo gradient-text text-base">
                 <Link href={"/app"}>Get Started</Link>
               </Button>
             </div>

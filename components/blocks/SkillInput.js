@@ -28,14 +28,14 @@ export default function SkillInput({ skills, setSkills }) {
   };
 
   return (
-    <div>
+    <div className="">
       <label
         htmlFor="skill-input"
         className="block text-sm font-medium text-sky-300 mb-1"
       >
-        Skills (e.g., react, node.js, python)
+        Skills (e.g., Node.js, Python, Photoshop)
       </label>
-      <div className="flex items-center gap-2 mb-2">
+      <div className="flex gap-2 mb-2">
         <input
           id="skill-input"
           type="text"
@@ -43,7 +43,7 @@ export default function SkillInput({ skills, setSkills }) {
           onChange={(e) => setCurrentSkill(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="Type a skill and press Enter or click Add button"
-          className="flex-grow p-2 border border-slate-600 rounded-md bg-slate-800 text-slate-100 focus:ring-sky-500 focus:border-sky-500"
+          className="flex-1 p-2 border border-slate-600 rounded-md bg-slate-800 text-slate-100 focus:ring-sky-500 focus:border-sky-500"
         />
         <button
           type="button"
@@ -54,6 +54,7 @@ export default function SkillInput({ skills, setSkills }) {
           <PlusCircleIcon size={20} className="mr-1" /> Add
         </button>
       </div>
+
       <div className="flex flex-wrap gap-2">
         {skills.map((skill) => (
           <span
