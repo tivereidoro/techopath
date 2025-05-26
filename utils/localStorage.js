@@ -1,6 +1,5 @@
 // utils/localStorage.js
-const STORAGE_KEY = "careerSuggesterSearches";
-const MAX_SEARCHES = 5;
+import { MAX_SEARCHES, STORAGE_KEY } from "@/utils/const";
 
 export const loadSearches = () => {
   if (typeof window === "undefined") return []; // Guard against server-side rendering
