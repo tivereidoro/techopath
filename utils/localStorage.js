@@ -1,4 +1,3 @@
-// utils/localStorage.js
 import { MAX_SEARCHES, STORAGE_KEY } from "@/utils/const";
 
 export const loadSearches = () => {
