@@ -7,7 +7,7 @@ export default function PreviousSearches({ searches, onLoadSearch }) {
   }
 
   return (
-    <div className="mt-10 p-4 bg-slate-800 rounded-lg shadow-md border border-slate-700">
+    <div className="mt-10 p-3 md:p-7 bg-slate-800 rounded-lg shadow-md border border-slate-700">
       <h3 className="text-lg font-semibold text-sky-300 mb-3 flex items-center">
         <ClockIcon size={20} className="mr-2" /> Previous Searches
       </h3>

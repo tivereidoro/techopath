@@ -8,11 +8,10 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import React, { useState } from "react";
+import MainLogo from "@/components/ui/MainLogo";
 import { Text, X } from "lucide-react";
 import { NavItems } from "@/lib/ui_config";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import MainLogo from "@/components/ui/MainLogo";
 
 // ==============================
 // ============= Homepage Navbar
@@ -37,7 +36,9 @@ export default function Navbar() {
                     href={item.href}
                     key={item.id}
                     className={`flex items-center gap-1.5 ${
-                      item.active ? "text-primary" : "text-golden-logo"
+                      item.active
+                        ? "text-primary"
+                        : "text-golden-logo hover:scale-105"
                     }`}
                   >
                     {<item.icon className="size-5" />}
@@ -49,7 +50,7 @@ export default function Navbar() {
               {/* CTA button */}
               <Link href={"/app"}>
                 <Button
-                  className={`p-6 border bg-transparent border-golden-logo`}
+                  className={`p-6 border bg-transparent border-golden-logo gradient-text text-base cursor-pointer hover:scale-105`}
                 >
                   Get Started
                 </Button>

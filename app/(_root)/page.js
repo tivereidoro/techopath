@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image"; // For optimized images
+import Image from "next/image";
 import {
   ChevronRight,
   Zap,
@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Placeholder for actual AI-generated images. Replace with your image paths.
-const heroImageUrl = "/images/ai-hero-bg.png"; // e.g., an abstract neural network or futuristic landscape
-const problemImageUrl = "/images/ai-sav.jpg"; // e.g., stylized image of someone at a confusing intersection
+// Placeholder for AI-generated images.
+const heroImageUrl = "/images/ai-hero-bg.png";
+const problemImageUrl = "/images/ai-sav.jpg";
 
 export default function LandingPage() {
   const fadeIn = (delay = 0) => ({
@@ -28,16 +28,15 @@ export default function LandingPage() {
     <div className="min-h-screen bg-slate-900 text-slate-100 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 min-h-[80vh] flex items-center">
-        {/* Background Image (replace with <Image> if you have a local one) */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          {/* Example placeholder: Gradient or a low-res pattern */}
+          {/* Gradient or a low-res pattern */}
           <Image
             src={heroImageUrl}
             alt="AI network"
             layout="fill"
-            objectFit="cover"
             quality={80}
-            className="opacity-90" // Adjust opacity as needed
+            className="opacity-90 object-cover"
             priority // Load this image first
           />
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/60 to-slate-900"></div>
@@ -59,7 +58,7 @@ export default function LandingPage() {
             variants={fadeIn(0.2)}
             initial="hidden"
             animate="visible"
-            className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10"
+            className="text-base md:text-2xl text-slate-300 max-w-3xl mx-auto mb-10"
           >
             Stop guessing. Discover the best recommended tech path that aligns
             with your passion and purpose. Our intelligent platform analyzes
@@ -78,8 +77,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Problem/Agitation Section */}
-      <section className="py-16 md:py-24 bg-slate-800/50">
+      {/* Problem statement Section */}
+      <section className="py-16 md:py-24 bg-slate-800/50 z-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -97,7 +96,7 @@ export default function LandingPage() {
               ever-evolving tech landscape? You&apos;re not alone.
             </p>
           </motion.div>
-          {/* Optional: Add an AI image here like problemImageUrl */}
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -105,14 +104,13 @@ export default function LandingPage() {
             variants={fadeIn(0.2)}
             className="max-w-2xl mx-auto mb-12"
           >
+            {/* AI image here */}
             <Image
-              src={problemImageUrl} // Replace with your image
-              alt="Person at a confusing crossroads of tech choices"
+              src={problemImageUrl}
+              alt="Confusing person at crossroads of tech choices"
               width={800}
               height={450}
-              layout="responsive"
-              objectFit="contain"
-              className="rounded-lg shadow-xl  z-10"
+              className="rounded-lg shadow-xl object-contain z-10"
             />
           </motion.div>
         </div>
@@ -284,10 +282,10 @@ export default function LandingPage() {
           >
             <Link
               href="/app"
-              className="inline-flex items-center justify-center px-10 py-5 bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold rounded-lg text-xl shadow-lg transition-transform duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center px-10 py-5 bg-yellow-600 hover:bg-golden-logo text-slate-900 font-bold rounded-lg text-xl shadow-lg transition-transform duration-300 hover:scale-105"
             >
               Discover Your Tech Path Now
-              <ChevronRight size={28} className="ml-3" />
+              <ChevronRight size={28} className="hidden sm:block ml-3" />
             </Link>
           </motion.div>
         </div>

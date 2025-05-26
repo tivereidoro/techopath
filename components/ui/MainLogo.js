@@ -3,8 +3,8 @@ import React from "react";
 
 export default function MainLogo() {
   return (
-    <>
-      <Image src={"/svgs/techOpath.png"} width={50} height={30} alt="logo" />
+    <div className="flex items-center cursor-pointer">
+      <Image src={"/svgs/techOpath.png"} width={"50"} height={30} alt="logo" />
 
       <Image
         src={"/svgs/techOpathText.png"}
@@ -14,6 +14,6 @@ export default function MainLogo() {
         className="hidden md:block ml-2 opacity-70"
         style={{ width: "auto", height: "30px" }}
       />
-    </>
+    </div>
   );
 }
