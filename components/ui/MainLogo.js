@@ -4,7 +4,13 @@ import React from "react";
 export default function MainLogo() {
   return (
     <div className="flex items-center cursor-pointer">
-      <Image src={"/svgs/techOpath.png"} width={"50"} height={30} alt="logo" />
+      <Image
+        src={"/svgs/techOpath.png"}
+        width={"50"}
+        height={30}
+        alt="logo"
+        style={{ width: "auto", height: "50px" }}
+      />
 
       <Image
         src={"/svgs/techOpathText.png"}
