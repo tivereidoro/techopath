@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${satoshi.variable} antialiased text-base`}
       >
         <div className="relative max-h-screen overflow-auto flex flex-col">
