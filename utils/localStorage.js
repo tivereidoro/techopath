@@ -2,7 +2,7 @@ import { MAX_SEARCHES, STORAGE_KEY } from "@/utils/const";
 
 /**
  * loadSearches - Load previous searches from localStorage
- * @returns {Array} Array of previous searches from localStorage
+ * @returns {Array} - Array of previous searches from localStorage
  */
 export const loadSearches = () => {
   if (typeof window === "undefined") return []; // Guard against server-side rendering
