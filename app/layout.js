@@ -1,13 +1,14 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import { Geist } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// import { Geist } from "next/font/google";
+
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
 const satoshi = localFont({
   src: "./fonts/satoshi.ttf",
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${satoshi.variable} antialiased text-base`}
+        className={`${satoshi.variable} antialiased text-base`}
       >
         <div className="relative max-h-screen overflow-auto flex flex-col">
           <Navbar />
